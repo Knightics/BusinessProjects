@@ -1,4 +1,0 @@
-BusinessProjects
-================
-
-Business Projects
