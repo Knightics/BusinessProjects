@@ -1,0 +1,17 @@
+c:\users\merrick\documents\visual studio 2010\Projects\Marshmallow\Marshmallow\obj\x86\Debug\MainWindow.baml
+c:\users\merrick\documents\visual studio 2010\Projects\Marshmallow\Marshmallow\obj\x86\Debug\MainWindow.g.cs
+c:\users\merrick\documents\visual studio 2010\Projects\Marshmallow\Marshmallow\obj\x86\Debug\App.g.cs
+c:\users\merrick\documents\visual studio 2010\Projects\Marshmallow\Marshmallow\obj\x86\Debug\Marshmallow_MarkupCompile.cache
+c:\users\merrick\documents\visual studio 2010\Projects\Marshmallow\Marshmallow\obj\x86\Debug\TestTree.baml
+c:\users\merrick\documents\visual studio 2010\Projects\Marshmallow\Marshmallow\obj\x86\Debug\TestTree.g.cs
+c:\users\merrick\documents\visual studio 2010\Projects\Marshmallow\Marshmallow\obj\x86\Debug\Marshmallow.g.resources
+c:\users\merrick\documents\visual studio 2010\Projects\Marshmallow\Marshmallow\obj\x86\Debug\Marshmallow.Properties.Resources.resources
+c:\users\merrick\documents\visual studio 2010\Projects\Marshmallow\Marshmallow\obj\x86\Debug\Marshmallow.csproj.GenerateResource.Cache
+c:\users\merrick\documents\visual studio 2010\Projects\Marshmallow\Marshmallow\bin\Debug\Marshmallow.exe
+c:\users\merrick\documents\visual studio 2010\Projects\Marshmallow\Marshmallow\bin\Debug\Marshmallow.pdb
+c:\users\merrick\documents\visual studio 2010\Projects\Marshmallow\Marshmallow\obj\x86\Debug\Marshmallow.exe
+c:\users\merrick\documents\visual studio 2010\Projects\Marshmallow\Marshmallow\obj\x86\Debug\Marshmallow.pdb
+c:\users\merrick\documents\visual studio 2010\Projects\Marshmallow\Marshmallow\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+c:\users\merrick\documents\visual studio 2010\Projects\Marshmallow\Marshmallow\obj\x86\Debug\Marshmallow_MarkupCompile.lref
+E:\Marshmallow\Marshmallow\obj\x86\Debug\Marshmallow.exe
+E:\Marshmallow\Marshmallow\obj\x86\Debug\Marshmallow.pdb
