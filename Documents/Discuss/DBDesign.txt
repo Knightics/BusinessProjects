@@ -1,0 +1,90 @@
+Terms
+
+(*): required
+***: 与其他表有外键约束
+(ddl): 用下拉框让用户操作
+
+TruckGroup Fields:
+1. ID 自增长
+2. ParentID: 车组的父节点ID，顶级车组此值为null
+3. Level: 车组级数，顶级车组为0, 因为最多为6级所以此处最大值为5
+4. Name(*)： 车组
+5. Coordinator: 车组负责人
+6. PhoneNo: 车组电话
+7. WorkItem(ddl): 作业类型(1.播种，2.犁地，3.采收)估计作业类型可扩展性不大，所以此处就不外关联其他表
+8. PlanArea: 计划作业面积
+9. Comment： 备注
+
+Truck Fields: (9以后的属性不可以修改)
+1. ID(*)(汽车序号)： 自增长
+***2. GroupID(*): 车组编号(和表TruckGroup有外键约束)
+3. PlateNo(*): 车牌号
+4. WorkItem(*)(ddl): (1.采棉机2.拖拉机3.其他)
+5. Brand(*): 品牌 
+6. Size（*）： 型号
+7. HorsePower: 马力
+8. TruckFrameNo：车架号
+9. EngineNo: 发动机号
+10.Color(ddl): (1.红；2.绿；3.其他)
+11. DeviceID(*): 终端编号
+12. SIM(*): sim卡号
+13. DeviceRent: 月租费用
+14. RentFlow: 包月流量
+***15. DriverID: 因为每个车辆可以有至多5个司机，所以此处(
+	1.可以用nvarchar,然后每个驾驶员的id用","分隔,
+	2. 或者此处不留此字段，直接用Driver表中的TruckID来关联Truck来进行逻辑，我比较推崇第二种
+	）
+16. BoughtDate: 购入时间
+17. Status(*)(ddl): (1.正常，2停用，3.注销)
+-------------------------------------------一下为监视信息-----------------------------------
+18. RunningStatus（ddl）：车辆运行状态（1.离线 2.熄火 3.行走 4.作业）
+19. Lon：经度
+20. Lat： 纬度
+21. Speed：速度
+22. Orientation: 方向
+23. GroudSpeed: 地面速度
+24. FanSpeed: 风机速度
+25. HeadStatus： 采头状态（不明白这个是什么东西，随便用的英文）
+26. OilPourStatus： 油脂加注状态
+27. PNStatus: 正复采状态
+28. CurrentArea: 当前采集面积
+29. TotalArea: 累计面积
+30. FuelCost： 累计油耗
+31. AlarmStatus： 报警状态
+32. TrackPeriod: 监控采集间隔（秒）
+**************************此处文档写的不是很清楚，我已经标识去问了*********************************
+
+OperatorGroup
+1. ID(*)：
+2. Name(*)： 操作组名称
+3. TruckGroup(*)(ddl): 管理车组(0:管理全部车组；被管理的车组ID用逗号分隔进行存储(例如：1,2,3))
+4. Status: 状态(1.正常 2.停止 3.注销)
+5. EndDate: 有效截止日期
+6. MSGAlarmNo: 短信报警号码
+7. MailAlarmAddress: 报警处理通知电子邮箱
+**************************此处权限选择处有些东西不是很清楚，我会发过去给问下*********************************
+
+Operator
+1. ID
+***2. GroupID(*): OperatorGroup ID
+3. OperatorName(*): 操作员姓名
+4. Password(*): 密码
+5. Name: 姓名
+6. Gender: 
+7. Department: 部门
+8. Degree： 文化程度
+9. Status(*): (1.正常 2.停止 3.注销)
+**************************此处权限选择处他们还在继续讨论，我会发过去给他们催一下*********************************
+
+Driver
+1. ID(*)
+***2. TruckID(*): 可参照我在Truck表里面14 Driver写的一些concern，你看下哪样好点。
+3. CredentialType（*）
+**************************只有一种身份证类型也要搞ddl，我会问下********************************* 
+4. CredentialNo（*）： 身份证编号
+5. Gender：
+6. Age：
+7. BirthDate
+8. Degree：文化程度
+9. PhoneNo（*）: 联系电话
+10. Address：联系地址
